@@ -22,6 +22,8 @@ const geocode = require('./Utils/geocode')
 const forecast = require('./Utils/forecast')
 
 const app = express()
+// Heroku provides process.env.PORT
+const port = process.env.PORT || 3000
 
 // Define paths for express config
 const publicDirPath = path.join(__dirname, '../public')     
@@ -125,6 +127,6 @@ app.get('*', (req, res) => {
 })
 
 // Start web server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000!')
+app.listen(process.env.PORT, () => {
+    console.log('Server is up on port' +  process.env.PORT + '!')
 })   
