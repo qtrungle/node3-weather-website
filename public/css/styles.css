@@ -6,7 +6,7 @@ header {
 body {
     color: #333333;          /* Nearly Black color */
     font-family: arial;
-    max-width: 650px;
+    max-width: 850px;
     margin: 0 auto;            /* Outside of the box. Top-bottom: 0, Left-Right: auto */
     padding: 0 16px;           /* Inside of the box. Top-bottom: 0, Left-Right: 16px */
 

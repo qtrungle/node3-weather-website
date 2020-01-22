@@ -127,6 +127,6 @@ app.get('*', (req, res) => {
 })
 
 // Start web server
-app.listen(process.env.PORT, () => {
-    console.log('Server is up on port' +  process.env.PORT + '!')
+app.listen(port, () => {
+    console.log('Server is up on port' +  port + '!')
 })   
