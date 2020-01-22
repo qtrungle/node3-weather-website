@@ -1,0 +1,61 @@
+header {
+    margin-top: 16px;
+    margin-bottom: 47px;
+}
+
+body {
+    color: #333333;          /* Nearly Black color */
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;            /* Outside of the box. Top-bottom: 0, Left-Right: auto */
+    padding: 0 16px;           /* Inside of the box. Top-bottom: 0, Left-Right: 16px */
+
+    display: flex;              /* layout of the page */
+    flex-direction:column;      /* vertical */
+    min-height: 100vh;          /* vh = viewport height = browser height
+}
+
+footer {
+    /* background: blue; */
+    color: #888888;                 /* Mid Grey color */
+    border-top: 1px solid#eeeeee;   /* Nearly White color */
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+/* .class     ==> can be used in different tags 
+    tag       ==> only in tag
+    tag tag1  ==> only in tag1 under tag
+*/
+.main-content {
+    flex-grow: 1;       /* One box for all view ??? */
+    /* Note: to create e.g. <div class="main-content">, type: div.main-content */
+}
+
+.portrait {
+    width: 250px;
+}
+
+input {
+    border: 1px solid, #cccccc;
+    padding: 8px
+}
+
+button {
+    cursor: pointer;
+    border: 1px, solid, #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}

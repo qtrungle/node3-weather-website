@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">   
+    <title>Weather</title>
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="icon" href="/img/weather.png">
+    <!-- /js/app.js is the client script -->
+    
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+
+        <form>
+            <input placeholder=location>
+            <button>Search</button>
+        </form>
+
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+    </div>
+
+    {{>footer}}
+    <br>
+    <br>
+
+    <!-- The client script must be here so the form is already defined when 
+         the client calls/accesses it-->
+    <script src="/js/client.js"></script>
+</body>
+</html>
