@@ -46,7 +46,7 @@ const request = require('request')
 const forecast = (latitude, longitude, callback) => {
     // url's components
     const key = '829b23e9d6c6300063dce2d4ad932e50/'
-    const params = '?units=si'  // SI unit ==> temperature in Celcius
+    const params = '?units=us'  // SI unit ==> temperature in Celcius
     const url = 'https://api.darksky.net/forecast/' + key + latitude + ',' + longitude + params
 
     // url is just defined above. Use (response.)body instead of response 
@@ -56,10 +56,10 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location. Try another search', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' - It is curently ' + body.currently.temperature + ' degrees outside. \nThere is  ' + body.currently.precipProbability + '% chance of rain.')          
+            const dailyData = body.daily.data[0]
+            callback(undefined, dailyData.summary + ' - It is curently ' + body.currently.temperature + ' degrees outside. Today high temperature is ' + dailyData.temperatureHigh + ' with a low of ' + dailyData.temperatureLow + ' and a dewpoint at ' + dailyData.dewPoint + ' . There is  ' + body.currently.precipProbability + '% chance of rain.')          
         }
     })
 }
-
 
 module.exports = forecast
